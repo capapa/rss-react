@@ -4,8 +4,8 @@ interface MyState {
   findTextValue: string;
 }
 
-class SearchBar extends Component<MyState, MyState> {
-  constructor(props: MyState) {
+class SearchBar extends Component<object, MyState> {
+  constructor(props: object) {
     super(props);
     this.state = { findTextValue: '' };
 
@@ -39,8 +39,11 @@ class SearchBar extends Component<MyState, MyState> {
             type="text"
             value={findTextValue}
             onChange={this.handleChange}
+            data-testid="searchBarInput-element"
           />
-          <button type="submit">Find</button>
+          <button type="submit" data-testid="searchBarButton-element">
+            Find
+          </button>
         </form>
       </div>
     );
