@@ -5,7 +5,9 @@ function Card() {
         <img src="./1.jpg" alt="phone" />
       </div>
       <p className="cardPrice">199.99 руб.</p>
-      <p className="cardDescription" data-testid="cardDescription-element">Обувь</p>
+      <p className="cardDescription" data-testid="cardDescription-element">
+        Обувь
+      </p>
       <p className="cardRate">
         <img src="./star.svg" alt="star" />
         <span>5</span>
