@@ -17,13 +17,14 @@ describe('Search bar', () => {
     expect(searchBarInput.value).toBe('find card text');
   });
 
-  it('submit Search Bar and Local storage', () => {
+  it('Search Bar and Local storage', () => {
     window.localStorage.clear();
     const savedText = 'saved find card text';
     const savedText2 = 'saved find card text 2';
     window.localStorage.setItem('searchBar', savedText);
 
-    render(<SearchBar />);
+    const { unmount } = render(<SearchBar />);
+
     const searchBarInput = screen.getByTestId(
       'searchBarInput-element'
     ) as HTMLInputElement;
@@ -34,11 +35,7 @@ describe('Search bar', () => {
       target: { value: savedText2 },
     });
 
-    const searchBarButton = screen.getByTestId(
-      'searchBarButton-element'
-    ) as HTMLInputElement;
-
-    fireEvent(searchBarButton, new MouseEvent('click'));
+    unmount();
 
     const localStorageValue = window.localStorage.getItem('searchBar');
     expect(localStorageValue).toBe(savedText2);

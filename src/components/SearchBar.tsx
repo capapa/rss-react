@@ -4,37 +4,39 @@ interface MyState {
   findTextValue: string;
 }
 
-class SearchBar extends Component<object, MyState> {
-  constructor(props: object) {
+class SearchBar extends Component<Record<string, never>, MyState> {
+  constructor(props: Record<string, never>) {
     super(props);
-    this.state = { findTextValue: '' };
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  componentDidMount() {
     const findTextValue = localStorage.getItem('searchBar');
     if (findTextValue) {
-      this.setState({ findTextValue });
+      this.state = { findTextValue };
+    } else {
+      this.state = { findTextValue: '' };
     }
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  componentWillUnmount() {
+    const { findTextValue } = this.state;
+    localStorage.setItem('searchBar', findTextValue);
   }
 
   handleChange(event: ChangeEvent<HTMLInputElement>) {
     this.setState({ findTextValue: event.target.value });
   }
 
-  handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const { findTextValue } = this.state;
-    localStorage.setItem('searchBar', findTextValue);
-  }
-
   render() {
     const { findTextValue } = this.state;
     return (
       <div>
-        <form className="searchBar" onSubmit={this.handleSubmit}>
+        <form
+          className="searchBar"
+          onSubmit={(event: FormEvent<HTMLFormElement>) => {
+            event.preventDefault();
+          }}
+        >
           <input
             type="text"
             value={findTextValue}
