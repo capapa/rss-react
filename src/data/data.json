@@ -1,0 +1,39 @@
+[
+    {
+      "id": 1,
+      "title": "Shoes",
+      "img": "1.jpg",
+      "rate": 5,
+      "price": 2099,
+      "description": "Обувь",
+      "delivery": "Доставка завтра"
+    },
+    {
+        "id": 2,
+        "title": "t-shirt",
+        "img": "2.jpg",
+        "rate": 4.5,
+        "price": 1099,
+        "description": "Футболка",
+        "delivery": "Доставка завтра"
+    },
+    {
+        "id": 3,
+        "title": "Pants",
+        "img": "3.jpg",
+        "rate": 3,
+        "price": 3499,
+        "description": "Штаны",
+        "delivery": "Доставка завтра"
+    },
+    {
+        "id": 4,
+        "title": "Gloves",
+        "img": "4.jpg",
+        "rate": 5,
+        "price": 699,
+        "description": "Перчатки",
+        "delivery": "Доставка завтра"
+    }
+  ]
+  
