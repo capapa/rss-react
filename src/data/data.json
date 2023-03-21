@@ -1,25 +1,25 @@
 [
     {
       "id": 1,
-      "title": "Shoes",
+      "title": "jacket",
       "img": "1.jpg",
       "rate": 5,
       "price": 2099,
-      "description": "Обувь",
+      "description": "Куртка",
       "delivery": "Доставка завтра"
     },
     {
         "id": 2,
-        "title": "t-shirt",
+        "title": "bag",
         "img": "2.jpg",
         "rate": 4.5,
         "price": 1099,
-        "description": "Футболка",
+        "description": "Сумка",
         "delivery": "Доставка завтра"
     },
     {
         "id": 3,
-        "title": "Pants",
+        "title": "pants",
         "img": "3.jpg",
         "rate": 3,
         "price": 3499,
@@ -28,11 +28,11 @@
     },
     {
         "id": 4,
-        "title": "Gloves",
+        "title": "shoes",
         "img": "4.jpg",
         "rate": 5,
-        "price": 699,
-        "description": "Перчатки",
+        "price": 2699,
+        "description": "Обувь",
         "delivery": "Доставка завтра"
     }
   ]

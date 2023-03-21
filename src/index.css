@@ -1,15 +1,23 @@
 body {
   font-family: sans-serif;
 }
+
+.currentPage {
+  text-align: right;
+}
+
 header {
+  background-color: antiquewhite;
+}
+
+.header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: antiquewhite;
   height: 10vh;
 }
 
-header a {
+.header a {
   margin: 0 10px;
 }
 
