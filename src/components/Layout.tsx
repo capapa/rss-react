@@ -18,23 +18,23 @@ class Layout extends Component<object, object> {
     return (
       <>
         <header>
-          <div className='header'>
-          <Link
-            to="/"
-            onClick={() => {
-              this.setState({});
-            }}
-          >
-            Home
-          </Link>
-          <Link
-            to="/about"
-            onClick={() => {
-              this.setState({});
-            }}
-          >
-            About us
-          </Link>
+          <div className="header">
+            <Link
+              to="/"
+              onClick={() => {
+                this.setState({});
+              }}
+            >
+              Home
+            </Link>
+            <Link
+              to="/about"
+              onClick={() => {
+                this.setState({});
+              }}
+            >
+              About us
+            </Link>
           </div>
           <div className="currentPage">Current page: {path}</div>
         </header>
