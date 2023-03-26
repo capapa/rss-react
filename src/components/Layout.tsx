@@ -8,6 +8,9 @@ class Layout extends Component<object, object> {
       case '':
         path = 'Home';
         break;
+      case 'addCard':
+        path = 'Add card';
+        break;
       case 'about':
         path = 'About';
         break;
@@ -26,6 +29,14 @@ class Layout extends Component<object, object> {
               }}
             >
               Home
+            </Link>
+            <Link
+              to="/addCard"
+              onClick={() => {
+                this.setState({});
+              }}
+            >
+              Add card
             </Link>
             <Link
               to="/about"
