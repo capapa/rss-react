@@ -10,13 +10,14 @@ class FileInput extends React.Component<
       <div className="form__item">
         <label htmlFor="file" className="form__item-label">
           Photo
-          <input
-            type="file"
-            className="form__item-file"
-            accept="image/*"
-            ref={refControl}
-          />
         </label>
+        <input
+          type="file"
+          className="form__item-file"
+          accept="image/*"
+          ref={refControl}
+        />
+
         <div
           className="form__item-error"
           style={{

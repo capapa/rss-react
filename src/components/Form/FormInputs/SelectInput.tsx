@@ -10,19 +10,20 @@ class SelectInput extends React.Component<
       <div className="form__item">
         <label htmlFor="select" className="form__item-label">
           {label}
-          <select
-            className="form__item-input"
-            defaultValue="default"
-            ref={refControl}
-          >
-            <option disabled value="default" hidden>
-              Производитель
-            </option>
-            <option value="rus">Россия</option>
-            <option value="turk">Турция</option>
-            <option value="chin">Китай</option>
-          </select>
         </label>
+        <select
+          className="form__item-input"
+          defaultValue="default"
+          ref={refControl}
+        >
+          <option disabled value="default" hidden>
+            Производитель
+          </option>
+          <option value="rus">Россия</option>
+          <option value="turk">Турция</option>
+          <option value="chin">Китай</option>
+        </select>
+
         <div
           className="form__item-error"
           style={{

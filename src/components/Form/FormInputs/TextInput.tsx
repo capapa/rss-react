@@ -11,7 +11,7 @@ class TextInput extends React.Component<
         <label className="form__item-label" htmlFor="name">
           {label}
         </label>
-        <input type="text" ref={refControl} className="form__item-input" data-testid="desctiption-element" />
+        <input type="text" ref={refControl} className="form__item-input" />
         <div
           className="form__item-error"
           style={{

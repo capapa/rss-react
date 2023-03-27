@@ -10,9 +10,9 @@ class DateInput extends React.Component<
       <div className="form__item">
         <label htmlFor="date" className="form__item-label">
           {label}
-
-          <input type="date" className="form__item-input" ref={refControl} />
         </label>
+        <input type="date" className="form__item-input" ref={refControl} />
+
         <div
           className="form__item-error"
           style={{
