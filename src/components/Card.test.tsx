@@ -10,6 +10,7 @@ describe('Card', () => {
       rate: 5,
       price: 333,
       delivery: 'test delivery',
+      arrival: new Date('2023-02-02'),
     };
     render(<Card card={card} />);
     const cardElem = screen.getByTestId('card-element');
