@@ -1,7 +1,8 @@
-import { ICards } from '../types/Types';
+import { ICardWrapper } from '../types/Types';
 
-function Card(props: ICards) {
+function Card(props: ICardWrapper) {
   const { card } = props;
+  // const { img, title, price, description, rate, delivery } = props;
   return (
     <div className="card" data-testid="card-element">
       <div className="cardImg">
@@ -15,7 +16,10 @@ function Card(props: ICards) {
         <img src="./star.svg" alt="star" />
         <span>{card.rate}</span>
       </p>
-      <p className="cardDelivery">{card.delivery}</p>
+      <p className="cardArrival">
+        Поступило на склад {card.arrival.toLocaleDateString()}
+      </p>
+      <p className="cardDelivery">Доставка {card.delivery}</p>
     </div>
   );
 }

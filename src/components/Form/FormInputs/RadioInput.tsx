@@ -26,7 +26,7 @@ class RadioInput extends React.Component<
   // }
 
   render() {
-    const { refControl, label, hasError } = this.props;
+    const { refControl, label, hasError, errorText } = this.props;
     return (
       <div className="form__item">
         <p className="form__item-label">{label}</p>
@@ -93,11 +93,10 @@ class RadioInput extends React.Component<
         <div
           className="form__item-error"
           style={{
-            display: hasError ? 'none' : 'block',
-            cursor: hasError ? 'default' : 'pointer',
+            display: hasError ? 'block' : 'none',
           }}
         >
-          Необходимо выбрать рейтинг
+          {errorText}
         </div>
       </div>
     );

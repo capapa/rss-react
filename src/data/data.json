@@ -6,7 +6,8 @@
       "rate": 5,
       "price": 2099,
       "description": "Куртка",
-      "delivery": "Доставка завтра"
+      "delivery": "завтра",
+      "arrival": "2023-01-21"
     },
     {
         "id": 2,
@@ -15,7 +16,8 @@
         "rate": 4.5,
         "price": 1099,
         "description": "Сумка",
-        "delivery": "Доставка завтра"
+        "delivery": "завтра",
+        "arrival": "2023-01-21"
     },
     {
         "id": 3,
@@ -24,7 +26,8 @@
         "rate": 3,
         "price": 3499,
         "description": "Штаны",
-        "delivery": "Доставка завтра"
+        "delivery": "завтра",
+        "arrival": "2023-01-21"
     },
     {
         "id": 4,
@@ -33,7 +36,8 @@
         "rate": 5,
         "price": 2699,
         "description": "Обувь",
-        "delivery": "Доставка завтра"
+        "delivery": "завтра",
+        "arrival": "2023-01-21"
     }
   ]
   

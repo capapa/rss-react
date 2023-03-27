@@ -2,10 +2,10 @@ import React from 'react';
 import { PropsFormItem } from '../../../types/Types';
 
 class DateInput extends React.Component<
-  PropsFormItem<React.RefObject<HTMLInputElement>>
+  PropsFormItem<React.RefObject<HTMLDataElement>>
 > {
   render() {
-    const { refControl, label, hasError } = this.props;
+    const { refControl, label, hasError, errorText } = this.props;
     return (
       <div className="form__item">
         <label htmlFor="date" className="form__item-label">
@@ -16,11 +16,10 @@ class DateInput extends React.Component<
         <div
           className="form__item-error"
           style={{
-            display: hasError ? 'none' : 'block',
-            cursor: hasError ? 'default' : 'pointer',
+            display: hasError ? 'block' : 'none',
           }}
         >
-          Введите дату
+          {errorText}
         </div>
       </div>
     );

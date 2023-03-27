@@ -5,7 +5,7 @@ class FileInput extends React.Component<
   PropsFormItem<React.RefObject<HTMLInputElement>>
 > {
   render() {
-    const { refControl, hasError } = this.props;
+    const { refControl, hasError, errorText } = this.props;
     return (
       <div className="form__item">
         <label htmlFor="file" className="form__item-label">
@@ -20,11 +20,10 @@ class FileInput extends React.Component<
         <div
           className="form__item-error"
           style={{
-            display: hasError ? 'none' : 'block',
-            cursor: hasError ? 'default' : 'pointer',
+            display: hasError ? 'block' : 'none',
           }}
         >
-          Необходимо выбрать фото
+          {errorText}
         </div>
       </div>
     );

@@ -5,6 +5,7 @@ function Cards() {
   return (
     <div className="container">
       {data.map((item) => {
+        item.arrival = new Date(item.arrival);
         return <Card key={item.id} card={item} />;
       })}
     </div>

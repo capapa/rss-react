@@ -5,7 +5,7 @@ class SelectInput extends React.Component<
   PropsFormItem<React.RefObject<HTMLSelectElement>>
 > {
   render() {
-    const { refControl, label, hasError } = this.props;
+    const { refControl, label, hasError, errorText } = this.props;
     return (
       <div className="form__item">
         <label htmlFor="select" className="form__item-label">
@@ -26,11 +26,10 @@ class SelectInput extends React.Component<
         <div
           className="form__item-error"
           style={{
-            display: hasError ? 'none' : 'block',
-            cursor: hasError ? 'default' : 'pointer',
+            display: hasError ? 'block' : 'none',
           }}
         >
-          Выберете значение
+          {errorText}
         </div>
       </div>
     );

@@ -29,7 +29,7 @@ header {
 
 .card {
   width: 200px;
-  height: 260px;
+  height: 280px;
   text-align: center;
   /* border: 1px solid #000; */
   background-color: antiquewhite;
@@ -56,4 +56,12 @@ header {
 .cardRate img {
   width: 12px;
   height: 12px;
+}
+
+.form__item {
+  display: flex;
+}
+
+.form__item-error {
+  color: red;
 }

@@ -1,4 +1,5 @@
 export interface ICard {
+  id: number;
   title: string;
   img: string;
   rate: number;
@@ -8,9 +9,12 @@ export interface ICard {
   country: string;
   arrival: Date;
 }
+export interface ICardWrapper {
+  card: ICard;
+}
 
 export interface ICards {
-  card: ICard;
+  cards: ICardWrapper[];
 }
 
 export type StateInput = {
@@ -18,6 +22,7 @@ export type StateInput = {
 };
 
 export type InfoValidation = {
+  id?: number;
   title?: string;
   img?: string | File;
   rate?: number;
@@ -28,21 +33,21 @@ export type InfoValidation = {
   arrival?: Date;
 };
 
-export type PropsForm = {
-  addFeedBackToState: (value: InfoValidation) => void;
+export type Props = {
+  id: number;
+  addCard: (value: InfoValidation) => void;
 };
 
-export type StateForm = {
-  validate: boolean;
+export type State = {
   errors: {
-    title: boolean;
-    img: boolean;
-    rate: boolean;
-    price: boolean;
-    description: boolean;
-    delivery: boolean;
-    country: boolean;
-    arrival: boolean;
+    title: string;
+    img: string;
+    rate: string;
+    price: string;
+    description: string;
+    delivery: string;
+    country: string;
+    arrival: string;
   };
 };
 
@@ -50,4 +55,13 @@ export type PropsFormItem<T> = {
   label: string;
   refControl: T;
   hasError: boolean;
+  errorText?: string;
 };
+
+// type PropsFormContol = {
+//   hasError: boolean;
+//   errorText: string;
+//   label: string;
+//   id: number;
+//   type: string;
+// };
